@@ -1,6 +1,6 @@
 # is.team MCP Servers
 
-Open-source [Model Context Protocol](https://modelcontextprotocol.io) servers that let AI agents interact with real-world platforms — social media, advertising, and news.
+Open-source [Model Context Protocol](https://modelcontextprotocol.io) servers that let AI agents interact with real-world platforms — project management, social media, advertising, and news.
 
 All servers work with **Claude Code**, **Claude Desktop**, **Cursor**, and any MCP-compatible client. Zero config, just `npx`.
 
@@ -9,6 +9,53 @@ Built by [is.team](https://is.team) — the AI-native project management platfor
 ---
 
 ## Servers
+
+### is.team &mdash; [@isteam/mcp](https://github.com/isteamhq/mcp)
+
+Connect AI agents to your project boards. Manage tasks, get real-time notifications, and automate workflows — your AI becomes a real team member.
+
+**48 tools** | API Token | [npm](https://www.npmjs.com/package/@isteam/mcp)
+
+```json
+{
+  "mcpServers": {
+    "is-team": {
+      "command": "npx",
+      "args": ["-y", "@isteam/mcp"],
+      "env": {
+        "IST_API_TOKEN": "ist_your_token_here"
+      }
+    }
+  }
+}
+```
+
+Get your token: [is.team](https://is.team) &rarr; Account Settings &rarr; API tab &rarr; Generate token.
+
+<details>
+<summary>All 48 tools</summary>
+
+**Task Management**: `list_cards`, `read_card`, `create_task`, `update_task`, `complete_task`, `move_task`, `reorder_tasks`, `add_comment`, `log_time`
+
+**Real-time**: `subscribe_card`, `unsubscribe_card` — get instant notifications when tasks appear, no polling
+
+**Chat**: `chat_history`, `chat_respond` — read and reply in card chat threads
+
+**GitHub**: `github_list_repos`, `github_create_repo`, `github_update_repo`, `github_get_file`, `github_create_branch`, `github_create_issue`, `github_close_issue`, `github_search_issues`, `github_create_pr`, `github_close_pr`, `github_search_prs`, `github_merge_pr`
+
+**Google Drive**: `drive_search_files`, `drive_get_file`, `drive_create_doc`, `drive_create_sheet`, `drive_create_folder`, `drive_update_file`, `drive_move_file`, `drive_delete_file`
+
+**Slack**: `slack_list_channels`, `slack_create_channel`, `slack_update_channel`, `slack_archive_channel`, `slack_send_message`, `slack_send_thread_reply`, `slack_get_channel_history`
+
+**Figma**: `figma_get_file`, `figma_get_comments`, `figma_post_comment`
+
+**Calendar**: `calendar_list_events`, `calendar_get_event`, `calendar_create_event`, `calendar_update_event`, `calendar_delete_event`
+
+**Meta**: `list_integrations`
+
+</details>
+
+---
 
 ### Twitter/X &mdash; [@isteam/twitter-mcp](https://github.com/isteamhq/twitter-mcp)
 
@@ -258,6 +305,7 @@ Each server has its own repository:
 
 | Server | Repository | Issues |
 |--------|------------|--------|
+| is.team | [isteamhq/mcp](https://github.com/isteamhq/mcp) | [Open issues](https://github.com/isteamhq/mcp/issues) |
 | Twitter/X | [isteamhq/twitter-mcp](https://github.com/isteamhq/twitter-mcp) | [Open issues](https://github.com/isteamhq/twitter-mcp/issues) |
 | Bluesky | [isteamhq/bluesky-mcp](https://github.com/isteamhq/bluesky-mcp) | [Open issues](https://github.com/isteamhq/bluesky-mcp/issues) |
 | LinkedIn | [isteamhq/linkedin-mcp](https://github.com/isteamhq/linkedin-mcp) | [Open issues](https://github.com/isteamhq/linkedin-mcp/issues) |
